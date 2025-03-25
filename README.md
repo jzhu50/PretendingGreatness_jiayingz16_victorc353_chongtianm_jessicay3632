@@ -1,1 +1,9 @@
-# PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632
+## P04: Makers Makin' It, Act II -- The Seequel by PretendingGreatness
+
+Michelle:
+
+Victor:
+
+Mark:
+
+Jessica:
