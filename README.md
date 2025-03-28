@@ -1,9 +1,11 @@
-## P04: Makers Makin' It, Act II -- The Seequel by PretendingGreatness
+# P04: Makers Makin' It, Act II -- The Seequel by PretendingGreatness
 
-Michelle:
+## Roster
+- Michelle Zhu: Full-stack/Project Lead
+- Victor Casado: Backend
+- Mark Ma: APIs
+- Jessica Yu: Frontend
 
-Victor:
+## Site Description
 
-Mark:
-
-Jessica:
+## Install Guide
