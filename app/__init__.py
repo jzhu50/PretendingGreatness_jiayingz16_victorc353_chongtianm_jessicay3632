@@ -4,11 +4,22 @@
 # March 2025
 
 from flask import Flask, render_template, request, redirect, url_for
+from user_db import *
+import os
+
 app = Flask(__name__)
 
+app.secret_key = os.urandom(32)
+
+createUsers()
+
 @app.route('/')
-def home():
+def login():
     return "hi"
+
+@app.route('/register')
+def register():
+    return "register"
 
 @app.route('/home')
 def home():
@@ -18,7 +29,7 @@ def home():
 def graph():
     return "hi"
 
-@app.rotue('/analysis')
+@app.route('/analysis')
 def analysis():
     return "hi"
 

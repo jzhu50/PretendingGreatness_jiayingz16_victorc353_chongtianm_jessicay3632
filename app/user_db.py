@@ -5,33 +5,30 @@
 
 import sqlite3
 
-user_file = "user.db"
+user_db = "user.db"
 
 def createUsers():
-    users = sqlite3.connect(user_file)
+    users = sqlite3.connect(user_db)
     c = users.cursor()
     c.execute("CREATE TABLE IF NOT EXISTS users (username TEXT, password TEXT)")
     users.commit()
-    c.close()
+    users.close()
 
 def addUser(username, password):
-    users = sqlite3.connect(user_file)
+    users = sqlite3.connect(user_db)
     c = users.cursor()
     if c.execute("SELECT 1 FROM users WHERE username=?", (username,)).fetchone() is None:
         c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         users.commit()
-        c.close()
+        users.close()
     return "Username already exists"
 
 def checkPass(username, password):
-    users = sqlite3.connect(user_file)
+    users = sqlite3.connect(user_db)
     c = users.cursor()
-    if c.execute("SELECT 1 FROM users WHERE username=?", (username,)).fetchone() is None:
+    if c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone() is None:
         return "Username doesn't exist. Please register."
-    c.execute("SELECT password FROM users WHERE username=?", (username,))
-    res = c.fetchone()
-    if password == res[0]:
+    pswd = c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone()
+    if password == pswd:
         return None
     return "Invalid password. Please try again."
-
-           

@@ -6,3 +6,5 @@ michelleZ -- 2025-03-27 11:20
 
 michelleZ -- 2025-04-01 11:20
 * finished writing summary of project
+* finished implementing authentication
+* 
