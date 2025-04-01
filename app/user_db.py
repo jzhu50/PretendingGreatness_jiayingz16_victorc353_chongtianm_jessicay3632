@@ -28,5 +28,3 @@ def checkPass(username, password):
     c = users.cursor()
     if c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone() is None:
         
-
-
