@@ -14,4 +14,19 @@ def createUsers():
     users.commit()
     c.close()
 
+def addUser(username, password):
+    users = sqlite3.connect(user_file)
+    c = users.cursor()
+    if c.execute("SELECT 1 FROM users WHERE username=?", (username,)).fetchone() is None:
+        c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
+        users.commit()
+        c.close()
+    return "Username already exists"
+
+def checkPass(username, password):
+    users = sqlite3.connect(user_file)
+    c = users.cursor()
+    if c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone() is None:
+        
+
 
