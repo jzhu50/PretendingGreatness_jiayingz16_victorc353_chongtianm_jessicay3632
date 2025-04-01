@@ -6,8 +6,14 @@ michelleZ -- 2025-03-27 11:20
 
 michelleZ -- 2025-04-01 11:20
 * finished writing summary of project
+* finished implementing authentication
 
 victorC -- 2025-04-01 11:46
 * wrote files to load database csvs
 * uploaded database csvs to project
 * made module to get AI responses
+
+markM -- 2025-04-01 11:20
+* Added basic requirements.txt
+* Added working app
+* Added html to home page.
