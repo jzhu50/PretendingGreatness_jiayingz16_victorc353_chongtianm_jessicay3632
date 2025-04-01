@@ -19,15 +19,15 @@ def login():
 
 @app.route('/register')
 def register():
-    return "register"
+    return render_template("register.html")
+
+@app.route('/login')
+def login():
+    return render_template("login.html")
 
 @app.route('/home')
 def home():
     return render_template("home.html")
-
-@app.route('/login')
-def login():
-    return "hi"
 
 @app.route('/graph')
 def graph():
