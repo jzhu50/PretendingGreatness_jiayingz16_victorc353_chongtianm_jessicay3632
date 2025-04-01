@@ -8,3 +8,8 @@ michelleZ -- 2025-04-01 11:20
 * finished writing summary of project
 * finished implementing authentication
 * 
+
+markM -- 2025-04-01 11:20
+* Added basic requirements.txt
+* Added working app
+* Added html to home page.
