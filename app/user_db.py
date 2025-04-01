@@ -21,14 +21,16 @@ def addUser(username, password):
         c.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
         users.commit()
         users.close()
+        return None # success
+    users.close()
     return "Username already exists"
 
 def checkPass(username, password):
     users = sqlite3.connect(user_db)
     c = users.cursor()
-    if c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone() is None:
-        return "Username doesn't exist. Please register."
     pswd = c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone()
-    if password == pswd:
+    if pswd is None:
+        return "Username doesn't exist. Please register."
+    if password == pswd[0]:
         return None
     return "Invalid password. Please try again."

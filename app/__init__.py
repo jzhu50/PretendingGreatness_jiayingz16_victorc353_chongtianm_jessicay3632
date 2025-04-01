@@ -3,7 +3,7 @@
 # SoftDev
 # March 2025
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, session, request, redirect, url_for
 from user_db import *
 import os
 
@@ -13,9 +13,11 @@ app.secret_key = os.urandom(32)
 
 createUsers()
 
-@app.route('/')
-def login():
-    return "hi"
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    if 'username' in session:
+        return render_template("home.html")
+    
 
 @app.route('/register')
 def register():
@@ -24,10 +26,6 @@ def register():
 @app.route('/login')
 def login():
     return render_template("login.html")
-
-@app.route('/home')
-def home():
-    return render_template("home.html")
 
 @app.route('/graph')
 def graph():
