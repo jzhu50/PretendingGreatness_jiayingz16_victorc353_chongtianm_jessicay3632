@@ -23,6 +23,10 @@ def register():
 
 @app.route('/home')
 def home():
+    return render_template("home.html")
+
+@app.route('/login')
+def login():
     return "hi"
 
 @app.route('/graph')
