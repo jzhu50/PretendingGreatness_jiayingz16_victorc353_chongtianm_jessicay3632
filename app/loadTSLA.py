@@ -1,5 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('./csvs/tsla_2025.csv')
+def load():
+	df = pd.read_csv('./csvs/tsla_2025.csv')
+	return df
 
-print(df.head())
