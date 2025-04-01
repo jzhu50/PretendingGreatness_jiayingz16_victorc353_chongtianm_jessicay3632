@@ -15,7 +15,7 @@ victorC -- 2025-04-01 11:46
 
 jessicaY-- 2025-04-01 11:47
 * Created css and html files 
-* Add basic html code to files
+* Added basic html code to files
 
 markM -- 2025-04-01 11:20
 * Added basic requirements.txt
