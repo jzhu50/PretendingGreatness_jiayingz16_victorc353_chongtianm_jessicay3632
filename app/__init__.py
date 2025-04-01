@@ -16,7 +16,7 @@ createUsers()
 def home():
     if 'username' in session:
         return render_template('home.html', username=session['username'])
-    return redirect(url_for('login')) 
+    return redirect(url_for('login'))
     
 @app.route('/register', methods=['GET', 'POST'])
 def register():

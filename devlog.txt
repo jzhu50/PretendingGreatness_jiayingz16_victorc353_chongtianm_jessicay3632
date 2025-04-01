@@ -23,5 +23,6 @@ markM -- 2025-04-01 11:20
 * Added html to home page.
 
 michelleZ -- 2025-04-01 18:30
-* finished home, register, login functions
-* added logout function
+* wrote home, register, login functions
+* added logout function in __init__.py
+* added login form in login.html
