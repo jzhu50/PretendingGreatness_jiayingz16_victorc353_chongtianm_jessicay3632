@@ -21,13 +21,13 @@ Ensure that **Git** is installed on your machine. For help, refer to the followi
 HTTPS METHOD:
 
 ```
-git clone https://github.com/IvanTardis/glutenFreePizza__ivang86_anastasial25_jiayingz16_tahmimh2.git      
+git clone https://github.com/jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632.git      
 ```
 
 SSH METHOD (requires the SSH key):
 
 ```
-git clone https://github.com/jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632.git
+git clone git@github.com:jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632.git
 ```
 2. Navigate to project directory:
 
