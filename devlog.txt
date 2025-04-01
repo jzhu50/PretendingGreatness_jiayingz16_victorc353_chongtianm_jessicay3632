@@ -1,5 +1,8 @@
-michelleZ -- 2025-03-27 11:00
+michelleZ -- 2025-03-27 11:20
 * revised DD: fixed site map, re-delegated tasks to balance workload, adjusted target ship date
 * updated roster in README
 * added routes in __init__.py
 * added and updated user_db.py
+
+michelleZ -- 2025-04-01 11:20
+* finished writing summary of project

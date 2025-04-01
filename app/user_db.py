@@ -26,7 +26,12 @@ def addUser(username, password):
 def checkPass(username, password):
     users = sqlite3.connect(user_file)
     c = users.cursor()
-    if c.execute("SELECT password FROM users WHERE username=?", (username,)).fetchone() is None:
-        
+    if c.execute("SELECT 1 FROM users WHERE username=?", (username,)).fetchone() is None:
+        return "Username doesn't exist. Please register."
+    c.execute("SELECT password FROM users WHERE username=?", (username,))
+    res = c.fetchone()
+    if password == res[0]:
+        return None
+    return "Invalid password. Please try again."
 
-
+           
