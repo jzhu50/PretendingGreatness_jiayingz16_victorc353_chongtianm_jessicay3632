@@ -32,3 +32,7 @@ michelleZ -- 2025-04-01 19:00-21:30
 
 victorC -- 2025-04-02 11:46
 * added account to droplet for softdev teammates
+
+markM -- 2025-04-02 11:20
+* Revamped home page, login page, and register page
+* Implemented logic for user database
