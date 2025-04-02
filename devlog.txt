@@ -36,3 +36,8 @@ victorC -- 2025-04-02 11:46
 markM -- 2025-04-02 11:20
 * Revamped home page, login page, and register page
 * Implemented logic for user database
+
+michelleZ -- 2025-04-01 11:20
+* worked on analysis.html
+* cleaned up requirements.txt
+* implemented gemini ai
