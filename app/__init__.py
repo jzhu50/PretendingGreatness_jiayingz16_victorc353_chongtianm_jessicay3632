@@ -5,6 +5,7 @@
 
 from flask import Flask, render_template, session, request, redirect, url_for
 from user_db import *
+from AI import *
 import os
 
 app = Flask(__name__)
@@ -50,6 +51,9 @@ def graph():
 
 @app.route('/analysis')
 def analysis():
+    if request.method == 'POST':
+        prompt = request.form['prompt']
+    getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4',prompt)
     return "hi"
 
 @app.route('/logout')
