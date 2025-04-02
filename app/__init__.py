@@ -5,6 +5,7 @@
 
 from flask import Flask, render_template, session, request, redirect, url_for
 from user_db import *
+from AI import *
 import os
 
 app = Flask(__name__)
@@ -14,43 +15,46 @@ createUsers()
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
+    return render_template('home.html')
+    """
     if 'username' in session:
         return render_template('home.html', username=session['username'])
     return redirect(url_for('login'))
-    
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        result = addUser(username, password)
-        if result is None:
-            session['username'] = username
-            return redirect(url_for('home'))
-        else:
-            return render_template("register.html", error=result)
-    return render_template("register.html")
+    """
 
-@app.route('/login')
+@app.route('/registerPage', methods=['GET'])
+def registerPage():
+    return render_template("registerPage.html")
+
+@app.route('/auth_register', methods=['POST'])
+def register():
+    username = request.form['username']
+    password = request.form['password']
+    result = addUser(username, password)
+    if result is None:
+        session['username'] = username
+        return redirect(url_for('home'))
+    return render_template("home.html", error=result)
+
+@app.route('/auth_login', methods=['POST'])
 def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        result = checkPass(username, password)
-        if result is None:
-            session['username'] = username
-            return redirect(url_for('home'), username=session['username'])
-        else:
-            return redirect(url_for('login'), error=result)
-    return render_template("login.html")
+    username = request.form['username']
+    password = request.form['password']
+    result = checkPass(username, password)
+    if result is None:
+        session['username'] = username
+        return redirect(url_for('graph'))
+    return render_template('home.html')
 
 @app.route('/graph')
 def graph():
     return "hi"
 
-@app.route('/analysis')
+@app.route('/analysis', methods=['GET', 'POST'])
 def analysis():
-    return "hi"
+    prompt = "Predict whether the Tesla stocks will go up or down given the following tweet:" + "RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
+    response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
+    return render_template('analysis.html', response=response)
 
 @app.route('/logout')
 def logout():
