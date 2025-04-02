@@ -10,7 +10,7 @@
 This project implements a web application that incorporates data visualization to identify interesting patterns and correlations between Elon Musk’s tweets and Tesla stock market prices.
 
 ## Direct Access
-Type mzhu.tech in the search bar of your web browser.
+Type https://mzhu.tech in the search bar of your web browser.
 
 ## Local Access Install Guide
 
