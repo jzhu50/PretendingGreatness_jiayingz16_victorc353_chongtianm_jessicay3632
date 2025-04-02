@@ -29,3 +29,7 @@ michelleZ -- 2025-04-01 18:30
 
 michelleZ -- 2025-04-01 19:00-21:30
 * implemented nginx on PM's droplet
+
+markM -- 2025-04-02 11:20
+* Revamped home page, login page, and register page
+* Implemented logic for user databases
