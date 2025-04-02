@@ -29,3 +29,6 @@ michelleZ -- 2025-04-01 18:30
 
 michelleZ -- 2025-04-01 19:00-21:30
 * implemented nginx on PM's droplet
+
+victorC -- 2025-04-02 11:46
+* added account to droplet for softdev teammates
