@@ -9,7 +9,10 @@
 ## Site Description
 This project implements a web application that incorporates data visualization to identify interesting patterns and correlations between Elon Musk’s tweets and Tesla stock market prices.
 
-## Install Guide
+## Direct Access
+Type https://mzhu.tech in the search bar of your web browser.
+
+## Local Access Install Guide
 
 **Prerequisites**
 
@@ -53,7 +56,7 @@ Ensure that **Git** and **Python** are installed on your machine. It is recommen
 1. Create Python virtual environment:
 
 ```
-python3 -m PATH/TO/venv_name
+python3 -m venv foo
 ```
 
 2. Activate virtual environment
