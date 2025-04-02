@@ -26,3 +26,6 @@ michelleZ -- 2025-04-01 18:30
 * wrote home, register, login functions
 * added logout function in __init__.py
 * added login form in login.html
+
+michelleZ -- 2025-04-01 19:00-21:30
+* implemented nginx on PM's droplet
