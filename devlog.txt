@@ -41,3 +41,12 @@ michelleZ -- 2025-04-01 11:20
 * worked on analysis.html
 * cleaned up requirements.txt
 * implemented gemini ai
+
+markM -- 2025-04-03 11:40
+* Deleted existing database and replaced with better ones
+* Started graph plotting work and fumbling through pandas.
+
+victorC -- 2025-04-02 11:46
+* Supported work for plotting stuff.
+* Did some ai stuff.
+
