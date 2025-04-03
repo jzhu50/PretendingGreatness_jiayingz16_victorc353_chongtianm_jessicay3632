@@ -51,3 +51,12 @@ michelleZ -- 2025-04-03 11:20
 
 jessicaY -- 2025-04-03 11:43
 *added more html to home and register page
+
+markM -- 2025-04-03 11:40
+* Deleted existing database and replaced with better ones
+* Started graph plotting work and fumbling through pandas.
+
+victorC -- 2025-04-03 11:46
+* Supported markM in plotting and pandas df work
+* Helped michelleZ debug flask code for why gemini didnt work
+* improved team morale

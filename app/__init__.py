@@ -5,10 +5,11 @@
 
 from flask import Flask, render_template, session, request, redirect, url_for
 from flask import jsonify
-import csv
+import os
+
+from graphloading import *
 from user_db import *
 from AI import *
-import os
 
 app = Flask(__name__)
 app.secret_key = os.urandom(32)
