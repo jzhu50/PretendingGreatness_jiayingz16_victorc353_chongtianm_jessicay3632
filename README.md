@@ -12,7 +12,7 @@ This project implements a web application that incorporates data visualization t
 ## Direct Access
 Type https://mzhu.tech in the search bar of your web browser.
 
-## Local Access Install Guide
+## Install Guide
 
 **Prerequisites**
 
