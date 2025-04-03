@@ -44,3 +44,7 @@ michelleZ -- 2025-04-02 11:20
 
 michelleZ -- 2025-04-03 8:00
 * wrote function for reading tesla stocks csv files
+
+michelleZ -- 2025-04-03 11:20
+* fixed ai & wrote analysis.html
+* imported tsla & tweet data
