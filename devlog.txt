@@ -14,7 +14,7 @@ victorC -- 2025-04-01 11:46
 * made module to get AI responses
 
 jessicaY-- 2025-04-01 11:47
-* Created css and html files 
+* Created css and html files
 * Added basic html code to files
 
 markM -- 2025-04-01 11:20
@@ -41,3 +41,6 @@ michelleZ -- 2025-04-01 11:20
 * worked on analysis.html
 * cleaned up requirements.txt
 * implemented gemini ai
+
+jessicaY -- 2025-04-03 11:41
+*implemented more html on home and register page
