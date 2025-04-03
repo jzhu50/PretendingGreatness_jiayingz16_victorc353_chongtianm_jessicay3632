@@ -37,10 +37,17 @@ markM -- 2025-04-02 11:20
 * Revamped home page, login page, and register page
 * Implemented logic for user database
 
-michelleZ -- 2025-04-01 11:20
+michelleZ -- 2025-04-02 11:20
 * worked on analysis.html
 * cleaned up requirements.txt
 * implemented gemini ai
 
-jessicaY -- 2025-04-03 11:41
-*implemented more html on home and register page
+michelleZ -- 2025-04-03 8:00
+* wrote function for reading tesla stocks csv files
+
+michelleZ -- 2025-04-03 11:20
+* fixed ai & wrote analysis.html
+* imported tsla & tweet data
+
+jessicaY -- 2025-04-03 11:43
+*added more html to home and register page
