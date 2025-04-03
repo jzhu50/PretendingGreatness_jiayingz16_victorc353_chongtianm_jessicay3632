@@ -14,7 +14,7 @@ victorC -- 2025-04-01 11:46
 * made module to get AI responses
 
 jessicaY-- 2025-04-01 11:47
-* Created css and html files 
+* Created css and html files
 * Added basic html code to files
 
 markM -- 2025-04-01 11:20
@@ -48,3 +48,6 @@ michelleZ -- 2025-04-03 8:00
 michelleZ -- 2025-04-03 11:20
 * fixed ai & wrote analysis.html
 * imported and organized tsla & tweet data
+
+jessicaY -- 2025-04-03 11:43
+*added more html to home and register page
