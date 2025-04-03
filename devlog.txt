@@ -47,4 +47,4 @@ michelleZ -- 2025-04-03 8:00
 
 michelleZ -- 2025-04-03 11:20
 * fixed ai & wrote analysis.html
-* imported tsla & tweet data
+* imported and organized tsla & tweet data

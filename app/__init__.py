@@ -59,7 +59,7 @@ def analysis():
     """for testing purpose"""
     prompt = "Predict whether the Tesla stocks will go up or down given the following tweet: RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
     response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
-    print(response)
+    #print(response)
     return render_template('analysis.html', response=response)
 
 @app.route('/logout')
