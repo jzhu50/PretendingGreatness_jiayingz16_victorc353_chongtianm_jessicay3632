@@ -3,7 +3,6 @@ import csv
 #from datetime import datetime
 #import matplotlib.pyplot as plt
 
-"""returns a dictionary of dates and tesla stock prices"""
 def tsla_data():
     data = {}
     with open('csvs/tesla_stocks.csv', 'r') as f:
@@ -16,24 +15,14 @@ def tsla_data():
 
 def tweet_data():
     posts_dict = {}
-    with open('csvs/all_musk_posts.csv', 'r') as f:
+    with open('app/csvs/all_musk_posts.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             date = row['createdAt']
-            content = row['fullText']
-            if date and content:  # only include if both exist
-                posts_dict[date] = content
-    print(posts_dict)
-
-
-'''
-df = pd.read_csv('./csvs/tesla_stocks.csv')
-# datetime.strptime('', '%Y-%m-%d')
-df['Date'].map(lambda x: datetime.strptime(x, '%Y-%m-%d'))
-print(df['Date'].head)
-df.plot(kind = 'scatter', x = 'Date', y = 'Open')
-plt.show()
-'''
+            post_content = row['fullText']
+            if date and post_content:  # only include if both exist
+                posts_dict[date] = post_content
+    return posts_dict
 
 if __name__ == '__main__': 
-    tweet_data()
+    print(tweet_data())

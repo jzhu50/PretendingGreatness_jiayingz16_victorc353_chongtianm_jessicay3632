@@ -69,3 +69,7 @@ michelleZ -- 2025-04-03 21:30
 
 victorC -- 2025-04-04 10:10
 * got tsla stock data from an api because kaggle was deemed unreliable
+
+michelleZ -- 2025-04-04 11:45
+* removed unnecessary csv files
+* debugged graph loading functions
