@@ -15,16 +15,16 @@ def tsla_data():
     return data
 
 def tweet_data():
-    data = {}
+    posts_dict = {}
     with open('csvs/all_musk_posts.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            date = row['Date']
-            # we need to filter the data by date
-            tweet = row['Tweet']
-            data[date] = tweet
-    print(data)
-    return data
+            date = row['createdAt']
+            content = row['fullText']
+            if date and content:  # only include if both exist
+                posts_dict[date] = content
+    print(posts_dict)
+
 
 '''
 df = pd.read_csv('./csvs/tesla_stocks.csv')
@@ -34,3 +34,6 @@ print(df['Date'].head)
 df.plot(kind = 'scatter', x = 'Date', y = 'Open')
 plt.show()
 '''
+
+if __name__ == '__main__': 
+    tweet_data()
