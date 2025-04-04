@@ -45,10 +45,8 @@ def login():
 
 @app.route('/graph', methods=['GET', 'POST'])
 def graph():
-    username = session.get('username')
-    if username is None:
-        return redirect(url_for('graph.html'))
-    return render_template('graph.html', username="Welcome, " + username + " !")
+    username = session.get('username', 'guest')
+    return render_template('graph.html', username=username)
 
 @app.route('/api/tesla_stock_data')
 def tesla_stock_data():

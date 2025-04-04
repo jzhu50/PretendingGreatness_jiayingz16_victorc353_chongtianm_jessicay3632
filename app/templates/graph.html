@@ -14,8 +14,8 @@
 </head>
 <body>
     <h1>Tesla Stock Prices</h1>
+    <p>Welcome, {{ username }}!</p>
     <div id="app"></div> <!-- React component renders here -->
-    <p>{{ username }}!</p>
     <script src="{{ url_for('static', filename='tesla_chart.js') }}"></script>
 </body>
 </html>
