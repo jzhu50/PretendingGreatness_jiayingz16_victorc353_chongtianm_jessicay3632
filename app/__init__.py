@@ -18,11 +18,6 @@ createUsers()
 @app.route('/', methods=['GET', 'POST'])
 def home():
     return render_template('home.html')
-    """
-    if 'username' in session:
-        return render_template('home.html', username=session['username'])
-    return redirect(url_for('login'))
-    """
 
 @app.route('/registerPage', methods=['GET'])
 def registerPage():
@@ -48,9 +43,10 @@ def login():
         return redirect(url_for('graph'))
     return render_template('home.html')
 
-@app.route('/graph')
+@app.route('/graph', methods=['GET', 'POST'])
 def graph():
-    return render_template('graph.html')
+    username = session.get('username')
+    return render_template('graph.html', username=username)
 
 @app.route('/api/tesla_stock_data')
 def tesla_stock_data():
