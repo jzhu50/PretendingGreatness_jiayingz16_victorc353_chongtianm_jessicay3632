@@ -10,13 +10,13 @@ def tsla_data():
         reader = csv.DictReader(f)
         for row in reader:
             date = row['Date']
-            stock_price = row['Open']
+            stock_price = row['Close']
             data[date] = stock_price
     return data
 
 def tweet_data():
     data = {}
-    with open('csvs/musk_quote_tweets.csv', 'r') as f:
+    with open('csvs/all_musk_posts.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             date = row['Date']
