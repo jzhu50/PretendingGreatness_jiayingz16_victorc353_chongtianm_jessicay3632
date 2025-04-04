@@ -61,6 +61,8 @@ victorC -- 2025-04-03 11:46
 * Helped michelleZ debug flask code for why gemini didnt work
 * improved team morale
 
-michelleZ -- 2025-04-03 22:00
+michelleZ -- 2025-04-03 21:30
 * wrote graph.html
-* incorporated React & Apex.Charts
+* wrote tesla_chart.js
+* wrote tesla_stock_data()
+* successfully displayed tsla stock price data through line graph

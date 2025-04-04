@@ -50,7 +50,7 @@ def login():
 
 @app.route('/graph')
 def graph():
-    return render_template('graph.html', username=session['username'])
+    return render_template('graph.html')
 
 @app.route('/api/tesla_stock_data')
 def tesla_stock_data():

@@ -3,6 +3,7 @@ import csv
 #from datetime import datetime
 #import matplotlib.pyplot as plt
 
+"""returns a dictionary of dates and tesla stock prices"""
 def tsla_data():
     data = {}
     with open('csvs/tesla_stocks.csv', 'r') as f:
@@ -11,8 +12,7 @@ def tsla_data():
             date = row['Date']
             stock_price = row['Open']
             data[date] = stock_price
-    #print(data)
-    return data #returns a dictionary of dates and tesla stock prices
+    return data
 
 def tweet_data():
     data = {}
@@ -34,7 +34,3 @@ print(df['Date'].head)
 df.plot(kind = 'scatter', x = 'Date', y = 'Open')
 plt.show()
 '''
-
-if __name__ == '__main__':
-    tsla_data()
-    #tweet_data()

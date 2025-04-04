@@ -1,76 +1,90 @@
+const { useState, useEffect } = React;
+
 const ApexChart = () => {
-    const[state, setState] = useState({
-        series: [{
-            name: 'Tesla Stock Price',
-            data: dates
-        }],
-        options: {
-            chart: {
-                type: 'area',
-                stacked: false,
-                height: 350,
-                zoom: {
-                    type: 'x',
-                    enabled: true,
-                    autoScaleYaxis: true
-                },
-                toolbar: {
-                    autoSelected: 'zoom'
-                }
-            },
-            dataLabels: {
-                enabled: false
-            },
-            markers: {
-                size: 0
+  const [data, setData] = useState([]);
+
+  // Fetch Tesla stock data from the server and format it for ApexCharts
+  // The data should be in the format [{ x: timestamp, y: price }, ...]
+  // The server should return data in JSON format
+  useEffect(() => {
+    fetch('/api/tesla_stock_data')
+      .then(res => res.json())
+      .then(stockData => {
+        const formattedData = Object.entries(stockData).map(([date, price]) => ({
+          x: new Date(date).getTime(),
+          y: parseFloat(price)
+        }));
+
+        setData(formattedData);
+
+        const options = {
+          chart: {
+            type: 'area',
+            height: 350,
+            zoom: {
+              type: 'x',
+              enabled: true,
+              autoScaleYaxis: true
+            }
+          },
+          dataLabels: {
+            enabled: false
+          },
+          markers: {
+            size: 0
+          },
+          title: {
+            text: 'Tesla Stock Price Movement',
+            align: 'left'
+          },
+          fill: {
+            type: 'gradient',
+            gradient: {
+              shadeIntensity: 1,
+              inverseColors: false,
+              opacityFrom: 0.5,
+              opacityTo: 0,
+              stops: [0, 90, 100]
+            }
+          },
+          yaxis: {
+            labels: {
+              formatter: function (val) {
+                return parseFloat(val).toFixed(2);
+              }
             },
             title: {
-                text: 'Tesla Stock Price',
-                align: 'left'
-            },
-            fill: {
-                type: 'gradient',
-                gradient: {
-                  shadeIntensity: 1,
-                  inverseColors: false,
-                  opacityFrom: 0.5,
-                  opacityTo: 0,
-                  stops: [0, 90, 100]
-                },
-            },
-            yaxis: {
-                labels: {
-                    formatter: function (val) {
-                        return (val / 100000).toFixed(0);
-                    },
-                },
-                title: {
-                    text: 'Price',
-                },
-            },
-            xaxis: {
-                type: 'datetime',
-            },
-            tooltip: {
-                shared: false,
-                y: {
-                    formatter: function (val) {
-                        return (val / 100000).toFixed(0);
-                    }
-                }
+              text: 'Price (USD)'
             }
-        },
-    });
+          },
+          xaxis: {
+            type: 'datetime'
+          },
+          tooltip: {
+            shared: false,
+            y: {
+              formatter: function (val) {
+                return parseFloat(val).toFixed(2);
+              }
+            }
+          },
+          series: [{
+            name: "Tesla Stock Price",
+            data: formattedData
+          }]
+        };
 
-    return (
-        <div>
-            <div id="chart">
-                <ReactApexChart options={state.options} series={state.series} type="area" height={350} />
-            </div>
-            <div id="html-dist"></div>
-        </div>
-    );
-}
+        const chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      })
+    }, []);
 
-const domContainer = document.querySelector('#app');
-ReactDOM.render(<ApexChart />, domContainer);
+  return React.createElement('div', { id: 'chart' });
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+  ReactDOM.render(
+    React.createElement(ApexChart),
+    document.getElementById('app')
+  );
+});
