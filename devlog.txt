@@ -66,3 +66,6 @@ michelleZ -- 2025-04-03 21:30
 * wrote tesla_chart.js
 * wrote tesla_stock_data()
 * successfully displayed tsla stock price data through line graph
+
+victorC -- 2025-04-04 10:10
+* got tsla stock data from an api because kaggle was deemed unreliable
