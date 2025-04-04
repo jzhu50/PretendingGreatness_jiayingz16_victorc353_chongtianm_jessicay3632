@@ -3,8 +3,7 @@
 # SoftDev
 # March 2025
 
-from flask import Flask, render_template, session, request, redirect, url_for
-from flask import jsonify
+from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 import os
 
 from graphloading import *
@@ -51,9 +50,11 @@ def login():
 
 @app.route('/graph')
 def graph():
-    if 'username' in session:
-        return render_template('graph.html', username=session['username'])
-    return redirect(url_for('login'))
+    return render_template('graph.html', username=session['username'])
+
+@app.route('/api/tesla_stock_data')
+def tesla_stock_data():
+    return jsonify(tsla_data())
 
 @app.route('/analysis')
 def analysis():

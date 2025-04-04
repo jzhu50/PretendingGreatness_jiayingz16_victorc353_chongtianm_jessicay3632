@@ -60,3 +60,7 @@ victorC -- 2025-04-03 11:46
 * Supported markM in plotting and pandas df work
 * Helped michelleZ debug flask code for why gemini didnt work
 * improved team morale
+
+michelleZ -- 2025-04-03 22:00
+* wrote graph.html
+* incorporated React & Apex.Charts
