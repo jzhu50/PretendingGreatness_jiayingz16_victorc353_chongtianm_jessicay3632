@@ -14,7 +14,7 @@ victorC -- 2025-04-01 11:46
 * made module to get AI responses
 
 jessicaY-- 2025-04-01 11:47
-* Created css and html files 
+* Created css and html files
 * Added basic html code to files
 
 markM -- 2025-04-01 11:20
@@ -37,7 +37,32 @@ markM -- 2025-04-02 11:20
 * Revamped home page, login page, and register page
 * Implemented logic for user database
 
-michelleZ -- 2025-04-01 11:20
+michelleZ -- 2025-04-02 11:20
 * worked on analysis.html
 * cleaned up requirements.txt
 * implemented gemini ai
+
+michelleZ -- 2025-04-03 8:00
+* wrote function for reading tesla stocks csv files
+
+michelleZ -- 2025-04-03 11:20
+* fixed ai & wrote analysis.html
+* imported and organized tsla & tweet data
+
+jessicaY -- 2025-04-03 11:43
+* added more html to home and register page
+
+markM -- 2025-04-03 11:40
+* Deleted existing database and replaced with better ones
+* Started graph plotting work and fumbling through pandas.
+
+victorC -- 2025-04-03 11:46
+* Supported markM in plotting and pandas df work
+* Helped michelleZ debug flask code for why gemini didnt work
+* improved team morale
+
+michelleZ -- 2025-04-03 21:30
+* wrote graph.html
+* wrote tesla_chart.js
+* wrote tesla_stock_data()
+* successfully displayed tsla stock price data through line graph
