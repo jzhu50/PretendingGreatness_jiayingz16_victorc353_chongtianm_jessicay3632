@@ -81,4 +81,4 @@ jessicaY -- 2025-04-06 10:03
 markM, michelleZ, victorC -- 2025-04-07 11:45
 *parsed data from file with no extension
 *meticulously ensured the python file is linked in the init main python file
-*made sure first chart works at intended
+*made sure first chart works as intended
