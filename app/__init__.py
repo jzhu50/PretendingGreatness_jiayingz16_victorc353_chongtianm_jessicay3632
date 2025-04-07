@@ -50,7 +50,7 @@ def graph():
 
 @app.route('/api/tesla_stock_data')
 def tesla_stock_data():
-    return jsonify(tsla_data())
+    return jsonify(aaaaa())
 
 @app.route('/analysis')
 def analysis():
