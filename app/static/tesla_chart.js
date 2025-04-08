@@ -25,16 +25,9 @@ const ApexChart = () => {
               type: 'x',
               enabled: true,
               autoScaleYaxis: true
-            },
-            events: {
-                dataPointSelection: function(event, chartContext, config) {
-                  const clickedDate = new Date(config.w.config.series[0].data[config.dataPointIndex].x);
-                  const dateStr = clickedDate.toISOString().split('T')[0];  // Get YYYY-MM-DD format
-              
-                  // Redirect to a new page with the clicked date
-                  window.location.href = `/tweet/${dateStr}`;
-                }
             }
+            //event: {
+            //}
           },
           dataLabels: {
             enabled: false

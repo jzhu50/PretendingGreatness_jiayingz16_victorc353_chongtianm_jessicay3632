@@ -5,6 +5,7 @@
 
 from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 import os
+from datetime import datetime
 
 from graphloading import *
 from user_db import *
@@ -55,13 +56,12 @@ def tesla_stock_data():
 @app.route('/tweet/<date>', methods=['GET', 'POST'])
 def tweet_detail(date):
     posts = tweet_data()
-    content = posts.get(date, ("No tweet content available for this date.", 0))
-    tweet_text, like_count = content
-    return render_template('tweet.html',date=date, tweet_text=tweet_text, like_count=like_count)
-
-@app.route('/api/post_data')
-def post_data():
-    return jsonify(tweet_data())
+    for full_datetime, (tweet_text, like_count) in posts.items():
+        post_date = full_datetime.split(' ')[0]
+        if post_date == date:
+            return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count)  
+    '''test: http://127.0.0.1:5001/tweet/2025-02-21'''
+    return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count=0)
 
 @app.route('/analysis')
 def analysis():
