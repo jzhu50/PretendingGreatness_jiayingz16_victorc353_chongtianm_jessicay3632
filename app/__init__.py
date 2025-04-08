@@ -59,7 +59,10 @@ def tweet_detail(date):
     for full_datetime, (tweet_text, like_count) in posts.items():
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
-            return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count)  
+            prompt = "Predict whether the Tesla stocks will go up or down given the following tweet: " + tweet_text
+            # needs new API key
+            #response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
+            return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count) #response=response)  
     '''test: http://127.0.0.1:5001/tweet/2025-02-21'''
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A")
 

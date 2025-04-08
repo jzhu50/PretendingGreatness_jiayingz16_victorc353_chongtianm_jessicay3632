@@ -90,3 +90,4 @@ michelleZ -- 2025-04-08 00:05
 michelleZ -- 2025-04-08 11:15
 * made graph clickable with individual data points
 * linked tweets with graph
+* attempted to display analysis for tweets

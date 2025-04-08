@@ -44,7 +44,7 @@ const ApexChart = () => {
             enabled: false
           },
           markers: {
-            size: 5,
+            size: 5, // makes data points larger/visible
           },
           title: {
             text: 'Tesla Stock Price Movement',
@@ -74,7 +74,7 @@ const ApexChart = () => {
             type: 'datetime'
           },
           tooltip: {
-            intersect: true,
+            intersect: true, // makes data points selectable
             shared: false,
             y: {
               formatter: function (val) {
