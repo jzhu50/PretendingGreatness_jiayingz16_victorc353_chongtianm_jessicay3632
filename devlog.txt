@@ -83,6 +83,10 @@ markM, michelleZ, victorC -- 2025-04-07 11:45
 * meticulously ensured the python file is linked in the init main python file
 * made sure first chart works as intended
 
-michelleZ -- 2025-04-08 12:05
+michelleZ -- 2025-04-08 00:05
 * filtered and organized posts data
 * wrote function to load tweet and like count by dates
+
+michelleZ -- 2025-04-08 11:15
+* made graph clickable with individual data points
+* linked tweets with graph

@@ -61,7 +61,7 @@ def tweet_detail(date):
         if post_date == date:
             return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count)  
     '''test: http://127.0.0.1:5001/tweet/2025-02-21'''
-    return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count=0)
+    return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A")
 
 @app.route('/analysis')
 def analysis():

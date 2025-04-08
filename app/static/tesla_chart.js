@@ -25,15 +25,26 @@ const ApexChart = () => {
               type: 'x',
               enabled: true,
               autoScaleYaxis: true
+            },
+            selection: {
+                enabled: true
+            },
+            events: {
+                dataPointSelection: function(event, chartContext, config) {
+                    // get the clicked date
+                    const clickedDate = new Date(config.w.config.series[0].data[config.dataPointIndex].x);
+                    // formate it properly
+                    const dateStr = clickedDate.toISOString().split('T')[0];
+                    // redirect to tweet page
+                    window.location.href = `/tweet/${dateStr}`;
+                }
             }
-            //event: {
-            //}
           },
           dataLabels: {
             enabled: false
           },
           markers: {
-            size: 0
+            size: 5,
           },
           title: {
             text: 'Tesla Stock Price Movement',
@@ -63,6 +74,7 @@ const ApexChart = () => {
             type: 'datetime'
           },
           tooltip: {
+            intersect: true,
             shared: false,
             y: {
               formatter: function (val) {
