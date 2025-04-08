@@ -52,12 +52,22 @@ def graph():
 def tesla_stock_data():
     return jsonify(aaaaa())
 
+@app.route('/tweet/<date>', methods=['GET', 'POST'])
+def tweet_detail(date):
+    posts = tweet_data()
+    content = posts.get(date, ("No tweet content available for this date.", 0))
+    tweet_text, like_count = content
+    return render_template('tweet.html',date=date, tweet_text=tweet_text, like_count=like_count)
+
+@app.route('/api/post_data')
+def post_data():
+    return jsonify(tweet_data())
+
 @app.route('/analysis')
 def analysis():
     """for testing purpose"""
     prompt = "Predict whether the Tesla stocks will go up or down given the following tweet: RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
     response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
-    #print(response)
     return render_template('analysis.html', response=response)
 
 @app.route('/logout')
