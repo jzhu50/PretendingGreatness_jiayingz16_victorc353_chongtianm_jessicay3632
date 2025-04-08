@@ -26,9 +26,6 @@ const ApexChart = () => {
               enabled: true,
               autoScaleYaxis: true
             },
-            selection: {
-                enabled: true
-            },
             events: {
                 dataPointSelection: function(event, chartContext, config) {
                     // get the clicked date
