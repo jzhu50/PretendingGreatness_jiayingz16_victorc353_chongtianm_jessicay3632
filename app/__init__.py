@@ -59,9 +59,11 @@ def tweet_detail(date):
     for full_datetime, (tweet_text, like_count) in posts.items():
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
-            prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable: {tweet_text}"
+            prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable: {tweet_text}. RETURN YOUR RESPONSE IN HTML FORMAT SO IT CAN BE DISPLAYED ON A WEBSITE NICELY. DO NOT RETURN A STRING. RETURN PURE HTML THAT BE CAN INSERTED INTO A TEMPLATE. AT THE BEGINNING, GIVE A SCORE FROM -100 TO 100 TO HOW EFFECTIVE YOU THINK THE TWEET IS TO TESLA STOCK CHANGES. BE HONEST AND INTERESTING."
             with open("keys/key_gemini.txt", "r") as key:
-                response = getGeminiResponse(key.read(), prompt)
+                response = getGeminiResponse(key.read().strip().rstrip(), prompt)
+                response = response.replace('```', '')
+                response = response.replace('html', '')
             return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
 
