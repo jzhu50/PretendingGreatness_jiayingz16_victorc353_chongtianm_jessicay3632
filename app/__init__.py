@@ -46,7 +46,7 @@ def login():
 
 @app.route('/graph', methods=['GET', 'POST'])
 def graph():
-    username = session.get('username', 'guest')
+    username = session.get('username', 'Guest')
     return render_template('graph.html', username=username)
 
 @app.route('/api/tesla_stock_data')
@@ -80,4 +80,4 @@ def logout():
 
 if __name__ == "__main__":
     app.debug = True
-    app.run(host='0.0.0.0', port='5001')
+    app.run(host='0.0.0.0', port='6969')
