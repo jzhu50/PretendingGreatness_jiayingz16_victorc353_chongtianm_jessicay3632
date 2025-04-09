@@ -1,4 +1,4 @@
 app/wsgi.py
 app/*.sock
 app/*.ini
-app/keys/key_gemini.txt
+app/keys/*.txt
