@@ -17,6 +17,9 @@
         text-align: center;
         border-bottom: 4px solid #e9ecef;
     }
+    nav {
+      background-color: #e9ecef;
+    }
     .button {
        transition: transform 0.2s;
     }
@@ -35,25 +38,31 @@
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
   <script src="https://cdn.jsdelivr.net/npm/react-apexcharts/dist/react-apexcharts.min.js"></script>
 </head>
-<body>
-  <center>
-  <h1 class="font-weight-bold p-3 mb-2 bg-dark text-light">
-     Analyzing Tesla Stocks
-  </h1>
-  <br><br>
-    <h2>Tesla Stock Prices</h2>
-    <p>Welcome, <strong> {{ username }}!</strong></p>
-    </center>
-    <div id="app"></div> <!-- React component renders here -->
-    <script src="{{ url_for('static', filename='tesla_chart.js') }}"></script>
-    <form action = "/" method = "GET">
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="https://github.com/jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632/blob/main/flag.jpg?raw=true" width="30" height="30" class="d-inline-block align-top" alt="">
+        PretendingGreatness
+      </a>
+    </nav>
     <center>
-      <br> <br>
-      <br> <br>
-      <br> <br>
-      Want to return home?
-      <br><br>
-      <button type="submit" class="button btn btn-secondary btn-md">Click Here</button>
-    </form>
-  </center>
+    <h1 class="font-weight-bold p-3 mb-2 bg-dark text-light">
+       Analyzing Tesla Stocks
+    </h1>
+    <br><br>
+        <h2>Tesla Stock Prices</h2>
+        <p>Welcome, <strong> {{ username }}!</strong></p>
+        <div id="app"></div> <!-- React component renders here -->
+        <script src="{{ url_for('static', filename='tesla_chart.js') }}"></script>
+        <form action = "/" method = "GET">
+        <br> <br>
+        <p> Click the points! </p>
+        <br> <br>
+        <br> <br>
+        <br> <br>
+        Want to return home?
+        <br><br>
+        <button type="submit" class="button btn btn-secondary btn-md">Click Here</button>
+      </form>
+    </center>
 </body>
