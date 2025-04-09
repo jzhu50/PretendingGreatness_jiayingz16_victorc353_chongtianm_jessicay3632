@@ -1,4 +1,0 @@
-wsgi.py
-*.sock
-*.ini
-keys/*.txt
