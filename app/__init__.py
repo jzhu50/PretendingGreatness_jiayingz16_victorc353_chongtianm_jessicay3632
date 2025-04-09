@@ -55,14 +55,13 @@ def tesla_stock_data():
 
 @app.route('/tweet/<date>', methods=['GET', 'POST'])
 def tweet_detail(date):
-    with open('keys/key_gemini.txt', 'r') as f:
-        key = f.read().strip()
     posts = tweet_data()
     for full_datetime, (tweet_text, like_count) in posts.items():
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
             prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable: {tweet_text}"
-            response = getGeminiResponse(key, prompt)
+            with open("keys/key_gemini.txt", "r") as key:
+                response = getGeminiResponse(key.read(), prompt)
             return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
 
