@@ -75,10 +75,19 @@ michelleZ -- 2025-04-04 11:45
 * debugged graph loading functions
 
 jessicaY -- 2025-04-06 10:03
-*added some css to styles.css
-*updated home.html
+* added some css to styles.css
+* updated home.html
 
 markM, michelleZ, victorC -- 2025-04-07 11:45
-*parsed data from file with no extension
-*meticulously ensured the python file is linked in the init main python file
-*made sure first chart works as intended
+* parsed data from file with no extension
+* meticulously ensured the python file is linked in the init main python file
+* made sure first chart works as intended
+
+michelleZ -- 2025-04-08 00:05
+* filtered and organized posts data
+* wrote function to load tweet and like count by dates
+
+michelleZ -- 2025-04-08 11:15
+* made graph clickable with individual data points
+* linked tweets with graph
+* attempted to display analysis for tweets

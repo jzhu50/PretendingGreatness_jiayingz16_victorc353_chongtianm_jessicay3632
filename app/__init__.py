@@ -5,6 +5,7 @@
 
 from flask import Flask, render_template, session, request, redirect, url_for, jsonify
 import os
+from datetime import datetime
 
 from graphloading import *
 from user_db import *
@@ -52,13 +53,25 @@ def graph():
 def tesla_stock_data():
     return jsonify(aaaaa())
 
+@app.route('/tweet/<date>', methods=['GET', 'POST'])
+def tweet_detail(date):
+    posts = tweet_data()
+    for full_datetime, (tweet_text, like_count) in posts.items():
+        post_date = full_datetime.split(' ')[0]
+        if post_date == date:
+            prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable: {tweet_text}"
+            #response = getGeminiResponse('', prompt)
+            return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
+    return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
+
+'''
 @app.route('/analysis')
 def analysis():
     """for testing purpose"""
-    prompt = "Predict whether the Tesla stocks will go up or down given the following tweet: RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
+    prompt = "Predict whether the Tesla stocks will go up or down given the following tweet, try your best, predict something, don't return unable to predict: RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
     response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
-    #print(response)
     return render_template('analysis.html', response=response)
+'''
 
 @app.route('/logout')
 def logout():
