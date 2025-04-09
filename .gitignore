@@ -1,0 +1,5 @@
+app/wsgi.py
+app/*.sock
+app/*.ini
+
+app/keys/*.txt
