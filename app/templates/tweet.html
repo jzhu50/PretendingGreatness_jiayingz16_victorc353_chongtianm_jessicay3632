@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
@@ -16,7 +17,10 @@
         text-align: center;
         border-bottom: 3px solid #e9ecef;
     }
-    img {
+    nav {
+      background-color: #e9ecef;
+    }
+    .i {
       width: 5%;
     }
     .card {
@@ -25,18 +29,23 @@
     }
   </style>
   <title>Tweet on {{ date }}</title>
-<head>
-  <center>
-    <h1 class="font-weight-bold p-3 mb-2 bg-dark text-light">
-    Elon Musk's Tweet from {{ date }}
-  </h1>
-  <br> <br>
-  <meta charset="UTF-8">
-</head>
-<body>
-    <div class="card" style="width:60rem">
+    </head>
+    <body>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="https://github.com/jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632/blob/main/flag.jpg?raw=true" width="30" height="30" class="d-inline-block align-top" alt="">
+          PretendingGreatness
+        </a>
+      </nav>
+      <center>
+        <h1 class="font-weight-bold p-3 mb-2 bg-dark text-light">
+        Elon Musk's Tweet from {{ date }}
+      </h1>
+      <br> <br>
+      <meta charset="UTF-8">
+      <div class="card" style="width:60rem">
         <div class="card-body">
-          <img src="https://pbs.twimg.com/profile_images/1893803697185910784/Na5lOWi5_400x400.jpg" class ="rounded-circle" alt="EMusk">
+          <img src="https://pbs.twimg.com/profile_images/1893803697185910784/Na5lOWi5_400x400.jpg" class ="i rounded-circle" alt="EMusk">
           <p><strong> Elon Musk</strong></p>
           <p><strong>Content:</strong> {{ tweet_text }} </p>
           <p><strong>Likes:</strong> {{ like_count }} </p>
@@ -47,6 +56,6 @@
   <a href="/graph">← Back to Graph</a>
   <br> <br>
   <p><strong>Analysis: </strong>{{ response }}</p>
+  </center>
 </body>
-</center>
 </html>
