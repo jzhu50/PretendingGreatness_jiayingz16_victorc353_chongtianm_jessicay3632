@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    h1 {
+        color: black;
+        padding: 40px 0;
+        text-align: center;
+        border-bottom: 3px solid #e9ecef;
+    }
+    img {
+      width: 5%;
+    }
+    .card {
+      border: 1px solid black;
+      padding-bottom: 1%;
+    }
+  </style>
   <title>Tweet on {{ date }}</title>
+<head>
+  <center>
+    <h1 class="font-weight-bold p-3 mb-2 bg-dark text-light">
+    Elon Musk's Tweet from {{ date }}
+  </h1>
+  <br> <br>
+  <meta charset="UTF-8">
 </head>
 <body>
-  <h1>Elon Musk's Tweet from {{ date }}</h1>
-  <p><strong>Content:</strong> {{ tweet_text }} </p>
-  <p><strong>Likes:</strong> {{ like_count }} </p>
+    <div class="card" style="width:60rem">
+        <div class="card-body">
+          <img src="https://pbs.twimg.com/profile_images/1893803697185910784/Na5lOWi5_400x400.jpg" class ="rounded-circle" alt="EMusk">
+          <p><strong> Elon Musk</strong></p>
+          <p><strong>Content:</strong> {{ tweet_text }} </p>
+          <p><strong>Likes:</strong> {{ like_count }} </p>
+        </div>
+      </div>
+    </div>
+    <br> <br>
   <a href="/graph">← Back to Graph</a>
-  <br> {{ response|safe }} 
+  <br> <br>
+  <p><strong>Analysis: </strong>{{ response }}</p>
 </body>
+</center>
 </html>
