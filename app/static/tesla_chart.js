@@ -52,7 +52,7 @@ const ApexChart = () => {
             gradient: {
               shadeIntensity: 1,
               inverseColors: false,
-              opacityFrom: 0.5,
+              opacityFrom: 0.8,
               opacityTo: 0,
               stops: [0, 90, 100]
             }
