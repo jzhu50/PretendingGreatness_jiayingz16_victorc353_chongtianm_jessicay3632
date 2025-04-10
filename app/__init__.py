@@ -59,7 +59,7 @@ def tweet_detail(date):
     for full_datetime, (tweet_text, like_count) in posts.items():
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
-            prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable and don't say you're forced to predict: {tweet_text}. RETURN YOUR RESPONSE IN HTML FORMAT SO IT CAN BE DISPLAYED ON A WEBSITE NICELY. DO NOT RETURN A STRING. RETURN PURE HTML THAT BE CAN INSERTED INTO A TEMPLATE. MAKE THE HTML LOOK PROFESSIONAL AND AS NICE AS POSSIBLE. AT THE BEGINNING, GIVE YOUR PREDICTED EXPECTED PERCENTAGE CHANGE TO THE STOCK PRICE BASED ON HOW EFFECTIVE YOU THINK THE TWEET IS. BE HONEST AND INTERESTING."
+            prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable and don't say you're forced to predict: {tweet_text}. RETURN YOUR RESPONSE IN HTML FORMAT SO IT CAN BE DISPLAYED ON A WEBSITE NICELY. DO NOT RETURN A STRING. RETURN PURE HTML THAT BE CAN INSERTED INTO A TEMPLATE. MAKE THE HTML LOOK PROFESSIONAL AND AS NICE AS POSSIBLE. AT THE BEGINNING, GIVE YOUR PREDICTED EXPECTED PERCENTAGE CHANGE TO THE STOCK PRICE BASED ON HOW EFFECTIVE YOU THINK THE TWEET IS. DO NOT INCLUDE THE ORIGINAL TWEET IN YOUR RESPONSE. BE HONEST AND INTERESTING."
             try:
                 with open("keys/key_gemini.txt", "r") as key:
                     K = key.read().strip().rstrip()
@@ -68,6 +68,7 @@ def tweet_detail(date):
                     response = getGeminiResponse(K, prompt)
                     response = response.replace('```', '')
                     response = response.replace('html', '')
+                    response = response.replace('< lang="en">', '')
                 return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
             except FileNotFoundError:
                 return "Please create keys/key_gemini.txt and add your key in there fellow devo."
