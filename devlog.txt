@@ -108,3 +108,9 @@ michelleZ -- 2025-04-10 00:30
 * added API key, __pycache__/, and other extra files to .gitignore
 * debugged graphloading functions and API calls
 * fixed tweet analysis display (raw html -> readable content)
+
+michelleZ, markM, victorC -- 2025-04-10 11:40
+* edited prompt for gemini sentiment analysis
+* brainstormed ideas for future provisions
+* changed the outlook for the graph
+
