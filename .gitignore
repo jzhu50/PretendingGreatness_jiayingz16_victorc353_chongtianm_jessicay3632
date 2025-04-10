@@ -1,5 +1,15 @@
-wsgi.py
-*.sock
-*.ini
+# ignore sensitive app files
+app/wsgi.py
+app/keys/
+app/*.sock
+app/*.ini
+
+# python cache
+*.pyc
 __pycache__/
-key_gemini.txt
+
+# system files
+.DS_Store
+
+# virtual environments
+mish/
