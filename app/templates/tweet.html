@@ -47,8 +47,8 @@
         <div class="card-body">
           <img src="https://pbs.twimg.com/profile_images/1893803697185910784/Na5lOWi5_400x400.jpg" class ="i rounded-circle" alt="EMusk">
           <p><strong> Elon Musk</strong></p>
-          <p><strong>Content:</strong> {{ tweet_text }} </p>
-          <p><strong>Likes:</strong> {{ like_count }} </p>
+          <p><strong>Content:</strong> {{ tweet_text | safe}} </p>
+          <p><strong>Likes:</strong> {{ like_count | safe}} </p>
         </div>
       </div>
     </div>
