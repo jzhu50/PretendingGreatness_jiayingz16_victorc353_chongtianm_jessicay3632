@@ -4,7 +4,7 @@ from datetime import datetime
 def tesla_data():
     clean = ["[", "]", "\n", '"', "'"]
     dicT = {}
-    with open("app/csvs/savedTSLA", "r") as f:
+    with open("csvs/savedTSLA", "r") as f:
         bruh = f.read().split('], [')
         for i in range(len(bruh)):
             bruh[i] = bruh[i].split(', ')
@@ -16,7 +16,7 @@ def tesla_data():
    
 def tweet_data():
     posts_dict = {}
-    with open('app/csvs/all_musk_posts.csv', 'r') as f:
+    with open('csvs/all_musk_posts.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             date = row['createdAt']
