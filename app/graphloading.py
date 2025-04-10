@@ -1,14 +1,14 @@
 import csv
 from datetime import datetime
 
-def aaaaa():
-    ass = ["[", "]", "\n", '"', "'"]
+def tesla_data():
+    clean = ["[", "]", "\n", '"', "'"]
     dicT = {}
-    with open("csvs/savedTSLA") as f:
+    with open("app/csvs/savedTSLA", "r") as f:
         bruh = f.read().split('], [')
         for i in range(len(bruh)):
             bruh[i] = bruh[i].split(', ')
-            for c in ass:
+            for c in clean:
                 for j in range(len(bruh[i])):
                     bruh[i][j] = bruh[i][j].replace(c, '')
             dicT[bruh[i][0]] = bruh[i][1]
@@ -16,7 +16,7 @@ def aaaaa():
    
 def tweet_data():
     posts_dict = {}
-    with open('csvs/all_musk_posts.csv', 'r') as f:
+    with open('app/csvs/all_musk_posts.csv', 'r') as f:
         reader = csv.DictReader(f)
         for row in reader:
             date = row['createdAt']

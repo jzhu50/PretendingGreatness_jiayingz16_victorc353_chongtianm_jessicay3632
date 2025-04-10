@@ -51,7 +51,7 @@ def graph():
 
 @app.route('/api/tesla_stock_data')
 def tesla_stock_data():
-    return jsonify(aaaaa())
+    return jsonify(tesla_data())
 
 @app.route('/tweet/<date>', methods=['GET', 'POST'])
 def tweet_detail(date):
@@ -60,21 +60,12 @@ def tweet_detail(date):
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
             prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable: {tweet_text}. RETURN YOUR RESPONSE IN HTML FORMAT SO IT CAN BE DISPLAYED ON A WEBSITE NICELY. DO NOT RETURN A STRING. RETURN PURE HTML THAT BE CAN INSERTED INTO A TEMPLATE. AT THE BEGINNING, GIVE A SCORE FROM -100 TO 100 TO HOW EFFECTIVE YOU THINK THE TWEET IS TO TESLA STOCK CHANGES. BE HONEST AND INTERESTING."
-            with open("keys/key_gemini.txt", "r") as key:
+            with open("app/keys/key_gemini.txt", "r") as key:
                 response = getGeminiResponse(key.read().strip().rstrip(), prompt)
                 response = response.replace('```', '')
                 response = response.replace('html', '')
             return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
-
-'''
-@app.route('/analysis')
-def analysis():
-    """for testing purpose"""
-    prompt = "Predict whether the Tesla stocks will go up or down given the following tweet, try your best, predict something, don't return unable to predict: RT @BillyM2k: dude bookmarks are an awesome twitter feature, especially when preparing for a twitter"
-    response = getGeminiResponse('AIzaSyBUudUUQJh-fGmE-iOPm_1A8caQTb62nJ4', prompt)
-    return render_template('analysis.html', response=response)
-'''
 
 @app.route('/logout')
 def logout():
