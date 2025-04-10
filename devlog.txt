@@ -74,7 +74,6 @@ michelleZ -- 2025-04-04 11:45
 * removed unnecessary csv files
 * debugged graph loading functions
 
-<<<<<<< HEAD
 jessicaY -- 2025-04-06 10:03
 * added some css to styles.css
 * updated home.html
@@ -93,9 +92,14 @@ michelleZ -- 2025-04-08 11:15
 * linked tweets with graph
 * attempted to display analysis for tweets
 
-jessicaY -- 2025-04-06 22:03
-*added some css to styles.css
-*updated home.html
+jessicaY -- 2025-04-08 22:03
+* added some css to styles.css
+* updated home.html
 
-jessicaY -- 2025-04-07 11:42
-*added consistent css across home.html, graph.html, and registerPage.html
+michelleZ, markM, victorC -- 2025-04-09 11:20
+* debugged API calls
+* revised prompt for Gemini API calls
+* displayed extra info for AI response
+
+jessicaY -- 2025-04-09 11:42
+* added consistent css across home.html, graph.html, and registerPage.html
