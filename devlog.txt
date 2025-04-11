@@ -114,3 +114,14 @@ michelleZ, markM, victorC -- 2025-04-10 11:40
 * brainstormed ideas for future provisions
 * changed the outlook for the graph
 
+DESIGN REVISIONS THUS FAR:
+------------------------------------
+- changed target ship date to 04/23/2025
+- removed tesla stock price dataset
+- added financial modeling prep (FMP) API
+- changed chart display to feature only tesla stock price over time
+- added features for display for each tweet: tweet content, like count, and AI prediction/analysis
+- removed vision for heatmap for tweets
+- added React alongside Apex.charts
+- slight change in task breakdown: DMZ is solely responsible for incorporating Apex.charts & React; DVC and DMM have similar responsibilities (backend + APIs)
+====================================
