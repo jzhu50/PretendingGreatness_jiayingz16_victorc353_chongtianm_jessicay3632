@@ -78,10 +78,10 @@ def tweet_detail(date):
                 return "Please create keys/key_gemini.txt and add your key in there fellow devo."
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
 
-@app.route('/logout')
+@app.route('/logout', methods=['GET', 'POST'])
 def logout():
     session.pop('username', None)
-    return redirect(url_for('logout'))
+    return redirect(url_for('home'))
 
 if __name__ == "__main__":
     app.debug = True
