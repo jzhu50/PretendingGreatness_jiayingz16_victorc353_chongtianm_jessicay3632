@@ -135,3 +135,8 @@ michelleZ -- 2025-04-10 21:30
 
 victorC -- 2025-04-11 11:21
 * login wall for AI analysis
+
+michelleZ, jessicaY -- 2025-04-11 11:30
+* planned video run-down
+* added logout button
+* cleaned up working directory
