@@ -3,13 +3,8 @@ from urllib.request import Request
 from urllib.request import urlopen
 import json
 import datetime
-import os
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import datetime
 
-def getHistoricalTeslaData(): #maybe expand to diff time frames in future?
+def getHistoricalTeslaData():
     current_time = datetime.datetime.now()
     url = f"https://financialmodelingprep.com/api/v3/historical-chart/1day/TSLA?from=2010-6-30&to={current_time.year}-{current_time.month}-{current_time.day}&apikey="
     FMP = open("./keys/key_FMP.txt", "r");
@@ -27,6 +22,7 @@ def getHistoricalTeslaData(): #maybe expand to diff time frames in future?
           else:
               print(f'Failed to retrieve data {response.status_code}')
     except Exception as e:
-       return "Failed"
+        print(f"Exception occurred: {e}")
+        return "Failed"
 
 print(getHistoricalTeslaData())
