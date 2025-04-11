@@ -66,9 +66,10 @@ def tweet_detail(date):
                     if len(K) == 0:
                         return "Please add your gemini API key in keys/key_gemini.txt!!"
                     response = getGeminiResponse(K, prompt)
-                    response = response.replace('```', '')
-                    response = response.replace('html', '')
-                    response = response.replace('< lang="en">', '')
+                    response = response.replace('```html', '').replace('```', '').strip()
+                    #response = response.replace('```', '')
+                    #response = response.replace('html', '')
+                    #response = response.replace('< lang="en">', '')
                 return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
             except FileNotFoundError:
                 return "Please create keys/key_gemini.txt and add your key in there fellow devo."

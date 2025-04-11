@@ -125,3 +125,10 @@ DESIGN REVISIONS THUS FAR:
 - added React alongside Apex.charts
 - slight change in task breakdown: DMZ is solely responsible for incorporating Apex.charts & React; DVC and DMM have similar responsibilities (backend + APIs)
 ====================================
+
+michelleZ -- 2025-04-10 21:30
+* discovered inconsistent errors in tweet display
+* attempted to fix errors potentially caused by Gemini api crash
+* confirmed that errors were due to exceeding API quota
+* cleaned up raw html returned by Gemini
+* replaced old key with new key
