@@ -140,3 +140,7 @@ michelleZ, jessicaY -- 2025-04-11 11:30
 * planned video run-down
 * added logout button
 * cleaned up working directory
+
+HOME STRETCH CHECKLIST:
+------------------------------------
+====================================
