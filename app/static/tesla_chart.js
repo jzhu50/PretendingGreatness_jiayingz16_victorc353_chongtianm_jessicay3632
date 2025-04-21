@@ -28,12 +28,23 @@ const ApexChart = () => {
             },
             events: {
                 dataPointSelection: function(event, chartContext, config) {
-                    // get the clicked date
-                    const clickedDate = new Date(config.w.config.series[0].data[config.dataPointIndex].x);
-                    // formate it properly
-                    const dateStr = clickedDate.toISOString().split('T')[0];
-                    // redirect to tweet page
-                    window.location.href = `/tweet/${dateStr}`;
+                  // display message while loading
+                  const msg = document.getElementById('loading')
+                  if(loading) {
+                    msg.style.display = 'flex';
+                    msg.style.justifyContent = 'center';
+                    msg.style.alignItems = 'center';
+                    msg.style.height = '75vh';
+                    msg.style.width = '100vw';
+                    msg.style.position = 'absolute';
+                    msg.style.color = 'red';
+                  }
+                  // get the clicked date
+                  const clickedDate = new Date(config.w.config.series[0].data[config.dataPointIndex].x);
+                  // formate it properly
+                  const dateStr = clickedDate.toISOString().split('T')[0];
+                  // redirect to tweet page
+                  window.location.href = `/tweet/${dateStr}`;
                 }
             }
           },
@@ -94,6 +105,11 @@ const ApexChart = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  const msg = document.getElementById('loading');
+  if (msg) {
+    msg.style.display = 'none';
+  }
+
   ReactDOM.render(
     React.createElement(ApexChart),
     document.getElementById('app')

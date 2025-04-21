@@ -147,3 +147,6 @@ HOME STRETCH CHECKLIST:
 * Upload demo video :: michelleZ
 * Submit demo video link :: michelleZ
 ====================================
+
+michelleZ -- 2025-04-21 18:30
+* implemented message to be display while loading
