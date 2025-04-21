@@ -70,9 +70,24 @@ def tweet_detail(date):
                         return "Please add your gemini API key in keys/key_gemini.txt!!"
                     response = getGeminiResponse(K, prompt)
                     response = response.replace('```html', '').replace('```', '').strip()
-                return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response)
+                
+                # check percentage change and display image accordingly
+                import re
+                percentage_match = re.search(r'([+-]?\d+\.?\d*)%', response[:200])
+                prediction_image = "angry.png"
+
+                if percentage_match:
+                    percentage = float(percentage_match.group(1)) # returns first capture group containing the numerical value (e.g. +5)
+                    if percentage >= 0:
+                        prediction_image = "happy.png"
+                    else:
+                        prediction_image = "angry.png"
+
+                return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response, prediction_image=prediction_image)
+            
             except FileNotFoundError:
                 return "Please create keys/key_gemini.txt and add your key in there fellow devo."
+            
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
 
 @app.route('/logout', methods=['GET', 'POST'])
