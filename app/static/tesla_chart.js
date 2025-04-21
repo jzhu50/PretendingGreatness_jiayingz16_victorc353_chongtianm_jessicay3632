@@ -34,7 +34,7 @@ const ApexChart = () => {
                     msg.style.display = 'flex';
                     msg.style.justifyContent = 'center';
                     msg.style.alignItems = 'center';
-                    msg.style.height = '75vh';
+                    msg.style.height = '60vh';
                     msg.style.width = '100vw';
                     msg.style.position = 'absolute';
                     msg.style.color = 'red';
