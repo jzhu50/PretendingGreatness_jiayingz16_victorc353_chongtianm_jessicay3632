@@ -140,3 +140,10 @@ michelleZ, jessicaY -- 2025-04-11 11:30
 * planned video run-down
 * added logout button
 * cleaned up working directory
+
+HOME STRETCH CHECKLIST:
+------------------------------------
+* Record demo video :: victorC, jessicaY, michelleZ, markM
+* Upload demo video :: michelleZ
+* Submit demo video link :: michelleZ
+====================================
