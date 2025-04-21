@@ -34,9 +34,8 @@ const ApexChart = () => {
                     msg.style.display = 'flex';
                     msg.style.justifyContent = 'center';
                     msg.style.alignItems = 'center';
-                    msg.style.height = '60vh';
-                    msg.style.width = '100vw';
-                    msg.style.position = 'absolute';
+                    msg.style.height = '5vh';
+                    msg.style.position = 'relative';
                     msg.style.color = 'red';
                   }
                   // get the clicked date

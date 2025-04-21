@@ -39,10 +39,6 @@
   <script src="https://cdn.jsdelivr.net/npm/react-apexcharts/dist/react-apexcharts.min.js"></script>
 </head>
 <body>
-  <div id="loading">
-    <h3>Loading...</h3>
-  </div>
-  
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
         <img src="https://github.com/jzhu50/PretendingGreatness_jiayingz16_victorc353_chongtianm_jessicay3632/blob/main/flag.jpg?raw=true" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -56,6 +52,9 @@
     <br><br>
         <h2>Tesla Stock Prices</h2>
         <p>Welcome, <strong> {{ username }}!</strong></p>
+        <div id="loading">
+          <h3>Loading...</h3>
+        </div>
         <div id="app"></div> <!-- React component renders here -->
         <script src="{{ url_for('static', filename='tesla_chart.js') }}"></script>
         <form action = "/" method = "GET">
