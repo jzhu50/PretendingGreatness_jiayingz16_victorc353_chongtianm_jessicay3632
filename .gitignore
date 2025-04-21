@@ -1,8 +1,8 @@
 # ignore sensitive app files
-app/wsgi.py
-app/keys/
-app/*.sock
-app/*.ini
+wsgi.py
+keys/
+*.sock
+*.ini
 
 # python cache
 *.pyc
@@ -10,6 +10,3 @@ __pycache__/
 
 # system files
 .DS_Store
-
-# virtual environments
-mish/
