@@ -27,6 +27,12 @@
       border: 1px solid black;
       padding-bottom: 1%;
     }
+    .button {
+       transition: transform 0.2s;
+    }
+    .button:hover {
+       transform: scale(1.05);
+    }
   </style>
   <title>Tweet on {{ date }}</title>
     </head>
@@ -58,8 +64,9 @@
     <div>
     {{ response|safe }}
     </div>
-    <a href="/logout">
-        <button class="button btn btn-secondary btn-md"> Log Out </button>
+    <br> <br>
+    <a href="/">
+        <button class="button btn btn-secondary btn-md"> Log In </button>
     </a>
 </center>
 </body>
