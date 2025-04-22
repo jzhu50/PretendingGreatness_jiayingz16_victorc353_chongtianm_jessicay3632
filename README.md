@@ -100,6 +100,7 @@ python3 -m venv foo
 * Data is parsed in graphloading.py, then passed in static/tesla_charts.js for displaying the graph.
 
 ### KNOWN BUGS/ISSUES
-* Sometimes hosted site crashes for no apparent reason.
-* AI Does not take context into its analysis.
+* Sometimes hosted site crashes for no apparent reason (FIX: restarting the droplet...)
+* AI Does not take context (i.e. the surrounding tweets) into its analysis.
 * Images/videos are not rendered in tweet analysis, which may influence predictions.
+* Original tweet of retweets are not factored into tweet analysis.
