@@ -156,3 +156,7 @@ michelleZ -- 2025-04-21 18:30
 victorC -- 2025-04-22 11:39
 * made images for happy and sad use api instead of regex to work more accurately
 * improved messaging
+
+michelleZ -- 2025-04-22 11:39
+* attempted to fix service errors
+* modified message content
