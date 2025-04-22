@@ -61,7 +61,7 @@ def tweet_detail(date):
         post_date = full_datetime.split(' ')[0]
         if post_date == date:
             if username == 'Guest':
-                return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count = like_count, response = "Login if you wish to view AI analysis of the posts")
+                return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count = like_count, response = "Login if you wish to view Elon Musk's portrait and an AI analysis of the tweet")
             prompt = f"Predict whether the Tesla stocks will go up or down given Elon Musk's tweet on {date}, try your best, predict something, don't return unable and don't say you're forced to predict: {tweet_text}. RETURN YOUR RESPONSE IN HTML FORMAT SO IT CAN BE DISPLAYED ON A WEBSITE NICELY. DO NOT RETURN A STRING. RETURN PURE HTML THAT BE CAN INSERTED INTO A TEMPLATE. MAKE THE HTML LOOK PROFESSIONAL AND AS NICE AS POSSIBLE. AT THE BEGINNING, GIVE YOUR PREDICTED EXPECTED PERCENTAGE CHANGE TO THE STOCK PRICE BASED ON HOW EFFECTIVE YOU THINK THE TWEET IS. DO NOT INCLUDE THE ORIGINAL TWEET IN YOUR RESPONSE. BE HONEST AND INTERESTING. If the projected movement in stock price is upwards, include a centered div with the image src /static/happy.png, otherwise, with /static/angry.png. Make sure the image has width and height of 200px"
             try:
                 with open("keys/key_gemini.txt", "r") as key:

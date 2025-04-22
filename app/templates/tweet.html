@@ -61,7 +61,7 @@
   <div class="prediction-image" style="text-align: center; margin: 20px 0;">
         <img src="{{ url_for('static', filename=prediction_image) }}" alt="Prediction Image" style="width: 25%; height: 25%;">
       </div> 
---!>
+-->
     </div>
     <br> <br>
     <a href="/graph">← Back to Graph</a>
@@ -71,11 +71,11 @@
     </div>
     <br> <br>
     {% if username %}
-    <br> <br>
+      <br> <br>
     {% else %}
-    <a href="/">
-        <button class="button btn btn-secondary btn-md"> Log In </button>
-    </a>
+      <a href="/">
+          <button class="button btn btn-secondary btn-md"> Log In </button>
+      </a>
     {% endif %}
 </center>
 </body>
