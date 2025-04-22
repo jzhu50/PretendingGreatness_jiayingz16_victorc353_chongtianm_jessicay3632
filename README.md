@@ -94,10 +94,10 @@ python3 -m venv foo
 ```
 
 ### FEATURE SPOTLIGHT
-* AI Prompting at line 64 in file __init__.py
-* AI API Integration in file AI.py
-* Database Population using API in FMP.py
-* Data is parsed in graphloading.py, then passed in static/tesla_charts.js for displaying the graph.
+* AI Prompting at line 64 in file `__init__.py`
+* AI API Integration in file `AI.py`
+* Database Population using API in `FMP.py`
+* Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
 
 ### KNOWN BUGS/ISSUES
 * Sometimes hosted site crashes for no apparent reason (FIX: restarting the droplet...)
