@@ -86,9 +86,21 @@ python3 -m venv foo
 5. Open the link that appears in the terminal to be brought to the website
     - You can visit the link via several methods:
         - Control + Clicking on the link
-        - Typing/Pasting http://127.0.0.1:5000 in any browser
+        - Typing/Pasting http://127.0.0.1:6969 in any browser
     - To close the app, press control + C when in the terminal
 
 ```    
-* Running on http://127.0.0.1:5000
+* Running on http://127.0.0.1:6969
 ```
+
+### FEATURE SPOTLIGHT
+* AI Prompting at line 64 in file `__init__.py`
+* AI API Integration in file `AI.py`
+* Database Population using API in `FMP.py`
+* Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
+
+### KNOWN BUGS/ISSUES
+* Sometimes hosted site crashes for no apparent reason (FIX: restarting the droplet...)
+* AI Does not take context (i.e. the surrounding tweets) into its analysis.
+* Images/videos are not rendered in tweet analysis, which may influence predictions.
+* Original tweet of retweets are not factored into tweet analysis.
