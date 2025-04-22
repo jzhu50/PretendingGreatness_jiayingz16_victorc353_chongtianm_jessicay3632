@@ -152,3 +152,7 @@ michelleZ -- 2025-04-21 18:30
 * implemented message to be display while loading
 * removed unncessary parts
 * used regex to display happy and angry Elon Musk accordingly
+
+victorC -- 2025-04-22 11:39
+* made images for happy and sad use api instead of regex to work more accurately
+* improved messaging
