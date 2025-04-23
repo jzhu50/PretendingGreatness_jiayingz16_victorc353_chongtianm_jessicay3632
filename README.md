@@ -7,7 +7,7 @@
 - Jessica Yu: Frontend
 
 ## Site Description
-This project implements a web application that incorporates data visualization to identify interesting patterns and correlations between Elon Musk’s tweets and Tesla stock market prices.
+This project implements a web application that leverages data visualization to explore and analyze potential patterns and correlations between Elon Musk’s tweets and Tesla’s stock market performance.
 
 ## Direct Access
 Type https://mzhu.tech in the search bar of your web browser.
