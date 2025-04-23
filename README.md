@@ -87,7 +87,7 @@ python3 -m venv foo
     - You can visit the link via several methods:
         - Control + Clicking on the link
         - Typing/Pasting http://127.0.0.1:6969 in any browser
-    - To close the app, press control + C when in the terminal
+    - To close the app, press control + C in the terminal
 
 ```    
 * Running on http://127.0.0.1:6969
@@ -100,7 +100,6 @@ python3 -m venv foo
 * Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
 
 ### KNOWN BUGS/ISSUES
-* Sometimes hosted site crashes for no apparent reason (FIX: restarting the droplet...)
-* AI Does not take context (i.e. the surrounding tweets) into its analysis.
-* Images/videos are not rendered in tweet analysis, which may influence predictions.
+* AI Does not take context (i.e. the recent tweets) into its analysis.
+* Images/videos in the tweet are not rendered in tweet analysis, which may influence predictions.
 * Original tweet of retweets are not factored into tweet analysis.
