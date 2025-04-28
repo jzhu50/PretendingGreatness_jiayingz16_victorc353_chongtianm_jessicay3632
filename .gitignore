@@ -1,6 +1,6 @@
 # ignore sensitive app files
 wsgi.py
-keys/
+keys/key_gemini.txt
 *.sock
 *.ini
 
