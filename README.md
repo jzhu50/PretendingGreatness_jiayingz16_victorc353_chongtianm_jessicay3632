@@ -9,9 +9,6 @@
 ## Site Description
 This project implements a web application that leverages data visualization to explore and analyze potential patterns and correlations between Elon Musk’s tweets and Tesla’s stock market performance.
 
-## Direct Access
-Type https://mzhu.tech in the search bar of your web browser.
-
 ## Install Guide
 
 **Prerequisites**
@@ -93,13 +90,13 @@ python3 -m venv foo
 * Running on http://127.0.0.1:6969
 ```
 
-### FEATURE SPOTLIGHT
+### Feature Spotlight
 * AI Prompting at line 64 in file `__init__.py`
 * AI API Integration in file `AI.py`
 * Database Population using API in `FMP.py`
 * Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
 
-### KNOWN BUGS/ISSUES
+### Known Bugs/Issues
 * AI Does not take context (i.e. the recent tweets) into its analysis.
 * Images/videos in the tweet are not rendered in tweet analysis, which may influence predictions.
 * Original tweet of retweets are not factored into tweet analysis.
