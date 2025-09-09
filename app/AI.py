@@ -2,10 +2,10 @@ from google import genai
 import sys
 
 def getGeminiResponse(key, prompt):
-	try: 
+	try:
 		client = genai.Client(api_key=key)
 		response = client.models.generate_content(
-				model="gemini-2.5-pro-exp-03-25", contents=prompt
+			model="gemini-2.5-flash", contents=prompt
 		)
 		return response.text
 	except Exception as e:

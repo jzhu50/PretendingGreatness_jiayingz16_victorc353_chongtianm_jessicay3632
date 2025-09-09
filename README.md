@@ -40,6 +40,18 @@ This project implements a web application that leverages data visualization to e
     ```
     pip install -r requirements.txt
     ```
+5. Obtain a free Gemini API key:
+    - Visit [Google AI Studio](https://aistudio.google.com/).
+    - Sign in with your Google account.
+    - Go to [Google AI Studio API Key page](https://aistudio.google.com/apikey).
+    - Click on "Create API Key" to generate your own Gemini API key and copy it.
+
+6. Add your Gemini API key:
+    - Place your Gemini API key in a file named `key_gemini.txt` inside the `app/keys/` directory.
+    - Example:
+      ```
+      echo "YOUR_GEMINI_API_KEY" > app/keys/key_gemini.txt
+      ```
 
 ## Launch Codes
 
@@ -62,7 +74,7 @@ Assuming you have completed the Install Guide and your virtual environment is ac
 
 ### Feature Spotlight
 * AI Prompting at line 64 in file `__init__.py`
-* AI API Integration in file `AI.py`
+* Gemini AI API Integration in file `AI.py`
 * Database Population using API in `FMP.py`
 * Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
 
