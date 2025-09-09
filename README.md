@@ -75,6 +75,7 @@ Assuming you have completed the Install Guide and your virtual environment is ac
 ### Feature Spotlight
 * AI Prompting at line 64 in file `__init__.py`
 * Gemini AI API Integration in file `AI.py`
+* Gemini AI API Integration in file `AI.py`
 * Database Population using API in `FMP.py`
 * Data is parsed in `graphloading.py`, then passed in `static/tesla_charts.js` for displaying the graph.
 
