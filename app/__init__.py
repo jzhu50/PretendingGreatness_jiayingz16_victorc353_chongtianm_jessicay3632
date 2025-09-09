@@ -72,8 +72,7 @@ def tweet_detail(date):
                     response = response.replace('```html', '').replace('```', '').strip()
                 
                 # check percentage change and display image accordingly
-                mcode = '''
-		import re
+                import re
                 percentage_match = re.search(r'([+-]?\d+\.?\d*)%', response[:200])
                 prediction_image = "angry.png"
 
@@ -83,11 +82,8 @@ def tweet_detail(date):
                         prediction_image = "happy.png"
                     else:
                         prediction_image = "angry.png"
-		
+                
                 return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response, prediction_image=prediction_image)
-            	'''
-
-                return render_template('tweet.html', date = date, tweet_text = tweet_text, like_count = like_count, response = response)
             except FileNotFoundError:
                 return "Please create keys/key_gemini.txt and add your key in there fellow devo."
             
@@ -98,8 +94,6 @@ def logout():
     session.pop('username', None)
     return redirect(url_for('home'))
 
-'''
 if __name__ == "__main__":
     app.debug = True
     app.run(host='0.0.0.0', port='5006')
-'''
