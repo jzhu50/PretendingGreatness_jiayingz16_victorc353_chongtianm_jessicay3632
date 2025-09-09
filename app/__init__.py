@@ -85,7 +85,7 @@ def tweet_detail(date):
                 
                 return render_template('tweet.html', date=date, tweet_text=tweet_text, like_count=like_count, response=response, prediction_image=prediction_image)
             except FileNotFoundError:
-                return "Please create keys/key_gemini.txt and add your key in there fellow devo."
+                return "Please create a Gemini API Key by following the instructions in README.md and add your key in .env at the root of the repository!!"
             
     return render_template('tweet.html', date=date, tweet_text="No tweet found for this date.", like_count="N/A", response="N/A")
 

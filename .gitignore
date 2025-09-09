@@ -1,6 +1,5 @@
 # ignore sensitive app files
 wsgi.py
-keys/key_gemini.txt
 *.sock
 *.ini
 
@@ -12,4 +11,4 @@ __pycache__/
 .DS_Store
 
 # env
-mish/
+foo/
