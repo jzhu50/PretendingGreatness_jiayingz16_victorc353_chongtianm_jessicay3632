@@ -2,9 +2,6 @@
 from google import genai
 import sys
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def getGeminiResponse(key, prompt):
 	try: 
