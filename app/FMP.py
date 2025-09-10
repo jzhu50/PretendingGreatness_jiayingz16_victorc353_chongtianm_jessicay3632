@@ -4,7 +4,7 @@ from urllib.request import urlopen
 import json
 import datetime
 
-# function used to get the historical data for the tesla stock price
+# function used to get historical tesla stock prices
 def getHistoricalTeslaData():
     current_time = datetime.datetime.now()
     url = f"https://financialmodelingprep.com/api/v3/historical-chart/1day/TSLA?from=2010-6-30&to={current_time.year}-{current_time.month}-{current_time.day}&apikey="
